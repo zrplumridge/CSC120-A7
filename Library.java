@@ -91,6 +91,7 @@ public class Library extends Building{
 
   public static void main(String[] args) {
     Library Josten = new Library("Josten", "Green Street", 1, false);
+    Josten.showOptions();
     Josten.addTitle("My Music");
     Josten.addTitle("Brother Robert");
     Josten.checkOut("My Music");

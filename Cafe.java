@@ -33,6 +33,15 @@ public class Cafe extends Building {
         this.nCups = nCups;
     }
 
+    public Cafe(String name, String address){
+        super(name, address, 1);
+        System.out.println("You have built a cafe: ☕");
+        this.nCoffeeOunces = 200;
+        this.nSugarPackets = 100;
+        this.nCreams = 100;
+        this.nCups = 50;
+    }
+
     /*
      * sellCoffee function
      * checks if enough of each supply is available, restocks if necessary, and prepares coffee
@@ -97,6 +106,7 @@ public class Cafe extends Building {
     //main method for testing
     public static void main(String[] args) {
         Cafe Compass = new Cafe("Compass Cafe", "Neilson Library", 2, 20, 10, 20, 50);
+        Compass.showOptions();
         Compass.sellCoffee(46, 4, 8);
         Compass.sellCoffee(10, 7, 3);
     }

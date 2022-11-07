@@ -23,6 +23,15 @@ public class House extends Building {
     this.residents = new ArrayList<String>();
   }
 
+  public House(String name, String address){
+    super(name, address, 4); //generally good idea to call parent constructor first then can change
+    //name + " House"
+    System.out.println("You have built a house: 🏠");
+    this.hasDiningRoom = false;
+    this.hasElevator = false;
+    this.residents = new ArrayList<String>();
+  }
+
   public boolean hasDiningRoom() {
     return hasDiningRoom;
   }
@@ -56,6 +65,7 @@ public class House extends Building {
 
   public static void main(String[] args) {
     House Lamont = new House("Lamont House", "Prospect Street", 4, true, true);
+    Lamont.showOptions();
     Lamont.moveIn("Izzy");
     Lamont.moveIn("Hannah");
     Lamont.moveIn("Zoe");

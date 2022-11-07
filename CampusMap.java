@@ -48,7 +48,7 @@ public class CampusMap {
         myMap.addBuilding(new Cafe("Compass Cafe", "7 Neilson Drive Northampton, MA 01063", 1, 300, 10, 20, 50));
         myMap.addBuilding(new Library("Neilson Library", "7 Neilson Drive Northampton, MA 01063", 5, true));
         myMap.addBuilding(new Library("Josten Library", "122 Green Street Northampton, MA 01063", 1, false));
-        myMap.addBuilding(new Cafe("Campus Center Cafe", "100 Elm Street Northampton, MA 01063", 1, 300, 343, 554, 332));
+        myMap.addBuilding(new Cafe("Campus Center Cafe", "100 Elm Street Northampton, MA 01063"));
         myMap.addBuilding(new Library("Hillyer Art Library", "20 Elm Stret Northampton, MA 01063", 4, true));
         myMap.addBuilding(new House("Northrop House", "49 Elm Street Northampton, MA 01063", 5, false, true));
         myMap.addBuilding(new House("Hubbard House", "25 Elm Street Northampton, MA 01063", 4, false, false));
