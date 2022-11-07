@@ -46,6 +46,10 @@ public class Building {
         return this.nFloors;
     }
 
+    public int getActiveFloor(){
+        return this.activeFloor;
+    }
+
     /* Navigation methods */
     public Building enter() {
         if (activeFloor != -1) {

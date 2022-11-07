@@ -59,9 +59,28 @@ public class House extends Building {
     return residents.contains(person);
   }
 
+  public int goToFloor(int floorNum, int activeFloor) {
+    if (this.getActiveFloor() == -1) {
+      throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
+    }
+    if (floorNum < 1 || floorNum > this.nFloors) {
+      throw new RuntimeException("Invalid floor number. Valid range for this Building is 1-" + this.nFloors +".");
+    }
+    if ((activeFloor > 1 + floorNum || activeFloor < floorNum - 1) && hasElevator == false){
+      throw new RuntimeException("This building does not have an elevator. ");
+    } else if (activeFloor == floorNum){
+      System.out.println("You are already on this floor. ");
+    } else {
+      activeFloor = floorNum;
+      System.out.println("You are now on floor #" + floorNum + " of " + this.name);
+
+    }
+    return activeFloor;
+  }
+
   public void showOptions() {
-    System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + moveIn(name)\n + moveOut(name)\n + isResident(name)");
-}
+    System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(new floor, current floor)\n + moveIn(name)\n + moveOut(name)\n + isResident(name)");
+  }
 
   public static void main(String[] args) {
     House Lamont = new House("Lamont House", "Prospect Street", 4, true, true);
